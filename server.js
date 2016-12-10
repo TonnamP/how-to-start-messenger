@@ -28,7 +28,7 @@ app.post('/webhook/', function (req, res) {
         sendGenericMessage(sender)
         continue
       }
-      sendTextMessage(sender, text.substring(0, 200))
+      sendTextMessage(sender,'Hi! ' + text.substring(0, 200) + 'I am bot messenger')
     }
     if (event.postback) {
       let text = JSON.stringify(event.postback)
